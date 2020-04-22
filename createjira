@@ -12,3 +12,4 @@ touch Jira_Installation/atlassian-jira/WEB-INF/classes/jira-application.properti
 echo "jira.home=/Users/karledwards/Downloads/Jira/Jira_Home" >> ./Jira_Installation/atlassian-jira/WEB-INF/classes/jira-application.properties;
 touch Jira_Home/jira-config.properties;
 echo "jira.websudo.is.disabled=true" >> Jira_Home/jira-config.properties;
+rm atlassian-jira-core-8.8.0.tar.gz;
