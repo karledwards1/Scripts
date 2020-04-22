@@ -1,0 +1,41 @@
+#!/bin/bash
+# Open Slack at Left Upper corner
+open -a Slack.app;
+osascript <<EOF
+tell application "System Events"
+	delay 0.5
+	key code 41 using {option down, shift down}  
+end tell
+EOF
+# Open Open MS Teams at Right Upper corner
+open -a Microsoft\ Teams.app;
+osascript <<EOF
+tell application "System Events"
+	delay 0.5
+	key code 39 using {option down, shift down}  
+end tell
+EOF
+# Open Mail at Left Lower corner
+open -a Mail.app;
+osascript <<EOF
+tell application "System Events"
+	delay 0.5
+	key code 47 using {option down, shift down}  
+end tell
+EOF
+# Open Messages at Right Lower corner
+open -a Messages.app;
+osascript <<EOF
+tell application "System Events"
+	delay 0.5
+	key code 44 using {option down, shift down}  
+end tell
+EOF
+# Open Calendar at Right Lower corner
+open -a Calendar.app;
+osascript <<EOF
+tell application "System Events"
+	delay 0.5
+	key code 44 using {option down, shift down}  
+end tell
+EOF

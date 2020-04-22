@@ -1,0 +1,22 @@
+# Create docker-compose.yml file in $PWD
+touch docker-compose.yml;
+
+# Make template and echo into YML file
+echo "\
+version: '1.0'
+
+services: 
+  service: 
+    image: 
+    environment:
+      -  
+    ports:
+      - \"8080:80\"
+    volumes:
+      - 
+
+volumes:
+  volumeName:" >> docker-compose.yml;
+
+# Open YML template in Visual Studio Code
+open docker-compose.yml -a Visual\ Studio\ Code;
