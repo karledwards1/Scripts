@@ -1,8 +1,7 @@
-curl -O https://product-downloads.atlassian.com/software/jira/downloads/atlassian-jira-core-8.8.0.tar.gz;
-tar -xzf atlassian-jira-core-8.8.0.tar.gz;
-mv atlassian-jira-core-8.8.0-standalone Jira_Installation;
+curl -O https://product-downloads.atlassian.com/software/jira/downloads/atlassian-jira-core-8.8.1.tar.gz;
+tar -xzf atlassian-jira-core-8.8.1.tar.gz;
+mv atlassian-jira-core-8.8.1-standalone Jira_Installation;
 mkdir Jira_Home;
-export JIRA_HOME=$PWD/Jira_Home;
 chown -R karledwards $PWD/Jira_Installation;
 chmod -R u=rwx,go-rwx $PWD/Jira_Installation;
 chown -R karledwards $PWD/Jira_Home;
@@ -12,4 +11,4 @@ touch Jira_Installation/atlassian-jira/WEB-INF/classes/jira-application.properti
 echo "jira.home=/Users/karledwards/Downloads/Jira/Jira_Home" >> ./Jira_Installation/atlassian-jira/WEB-INF/classes/jira-application.properties;
 touch Jira_Home/jira-config.properties;
 echo "jira.websudo.is.disabled=true" >> Jira_Home/jira-config.properties;
-rm atlassian-jira-core-8.8.0.tar.gz;
+rm atlassian-jira-core-8.8.1.tar.gz;
