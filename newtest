@@ -1,0 +1,40 @@
+#!/bin/sh
+app_running()
+{
+    app=$1
+    is_running=$(ps aux | grep $1)
+    
+    # is_running=$(pidof $1)
+    echo $2
+    if [[ $1 == $2 ]]; then
+        echo "App running"
+    else
+        echo "App NOT running"
+    fi
+}
+
+app_running Magnet
+
+# end app_running
+
+# osascript -e "do shell script \"
+#     if (my app_running "Magnet.app" then
+# 	    return "Magnet running"
+#     else
+# 	    tell application Magnet to activate
+# 	    return "Magnet started"
+#     fi
+# \""
+
+# osascript <<EOF
+
+# EOF
+
+# osascript -e "do shell script \"
+#     if (my app_running("Slack")) then
+# 	    return "Slack running"
+#     else
+# 	    tell application "Slack" to activate
+# 	    return "Slack started"
+#     end if
+# \""

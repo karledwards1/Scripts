@@ -1,9 +1,19 @@
-#!/bin/bash
+#!/bin/sh
+osascript -e "do shell script \"
+	if (ps aux | grep "Magnet" | grep -v grep > /dev/null)
+	then
+		echo Magnet open
+	else
+		echo Opening Magnet
+		open -a Magnet.app
+	fi
+\""
+
 # Open Slack at Left Upper corner
 open -a Slack.app;
 osascript <<EOF
 tell application "System Events"
-	delay 0.5
+	delay 1
 	key code 41 using {option down, shift down}  
 end tell
 EOF
